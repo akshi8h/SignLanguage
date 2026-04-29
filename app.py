@@ -7,7 +7,11 @@ from camera import CameraHandler
 from predictor_manager import PredictorManager
 from ui import SignLanguageUI
 from text_refiner import TextRefiner
+from dotenv import load_dotenv
+from src.gemini_refiner import GeminiRefiner
 
+load_dotenv()
+refiner = GeminiRefiner()
 
 class SignLanguageApp:
     def __init__(self):

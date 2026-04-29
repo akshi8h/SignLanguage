@@ -1,9 +1,10 @@
 from google import genai
+import os 
 
 class GeminiRefiner:
     def __init__(self):
         self.client = genai.Client(
-            api_key="AIzaSyAQrj0bpDqIZ3dtUyuzFbPuGeHlGivPmNI"
+            api_key=os.getenv("GEMINI_KEY");
         )
 
     def refine_sentence(self, text: str) -> str:
